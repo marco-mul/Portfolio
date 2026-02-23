@@ -106,6 +106,39 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
+            style={{ backgroundImage: "url('/projects/travel-plan.png')" }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          />
+          <a
+            href="https://travel-plan-marco.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Travel Plan</h3>
+          </a>
+          <p>
+            A full-stack app to organize your travels and plan stop by stop
+            itineraries with drag-and-drop feature. Built with Next.js, Neon,
+            OAuth and Google Maps API integration.
+          </p>
+          <div className="project-stack">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>Neon</span>
+            <span>Prisma</span>
+            <span>OAuth</span>
+            <span>Maps API</span>
+            <span>TailwindCSS</span>
+          </div>
+        </motion.div>
+        {/* PORTFOLIO TO BE ADDED IF NEEDED TO BALANCE OUT THE GRID
+        <motion.div
+          className="project-card"
+          variants={fadeInUp}
+          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+        >
+          <motion.div
+            className="project-image"
             style={{ backgroundImage: "url('/projects/portfolio.png')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
@@ -122,7 +155,7 @@ export const Projects = () => {
             <span>CSS</span>
             <span>EmailJS</span>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.section>
   );

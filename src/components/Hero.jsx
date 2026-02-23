@@ -45,8 +45,11 @@ export const Hero = () => {
             Full Stack Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            Your A to Z go-to for having a website that truly embodies your
-            brand and leaves your competition in the dust.
+            After 10+ years in the digital marketing industry, I transitioned to
+            software development driven by my passion for technology and
+            problem-solving. I specialize in building responsive full-stack web
+            applications. I'm eager to contribute my skills and grow as a
+            developer in a dynamic team environment.
           </motion.p>
           <motion.div className="cta-buttons">
             <motion.a
@@ -67,10 +70,13 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="#" target="_blank">
+            <motion.a href="https://github.com/marco-mul" target="_blank">
               <i className="fab fa-github"></i>
             </motion.a>
-            <motion.a href="#" target="_blank">
+            <motion.a
+              href="https://www.linkedin.com/in/marco-m-52941096/"
+              target="_blank"
+            >
               <i className="fab fa-linkedin"></i>
             </motion.a>
           </motion.div>
@@ -99,7 +105,7 @@ export const Hero = () => {
   name: "Marco Muller",
   role: "Full Stack Developer",
   stack: {
-    languages: ["JavaScript", "TypeScript", "SQL?"],
+    languages: ["JavaScript", "TypeScript", "HTML", "CSS"],
     frameworks: ["React", "Next.JS", "TailwindCSS"], 
   },
   traits: [
@@ -109,7 +115,7 @@ export const Hero = () => {
     ],
     motto:
       "Code with passion, deploy with confidence.",
-      availability: "Ready when your are!",
+      availability: "Ready when you are!",
 };`}
             </SyntaxHighlighter>
           </div>
