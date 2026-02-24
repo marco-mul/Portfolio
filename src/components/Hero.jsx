@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useTranslation } from "react-i18next";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -15,6 +16,7 @@ const staggerContainer = {
 };
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
     // we use id for navigation inside the single page app
     <motion.section
@@ -32,7 +34,7 @@ export const Hero = () => {
           animate="animate"
         >
           <motion.div className="hero-badge">
-            <span>👋 Hello! I'm</span>
+            <span>👋 {t('greeting')}</span>
           </motion.div>
           <motion.h1
             className="glitch"
@@ -45,11 +47,7 @@ export const Hero = () => {
             Full Stack Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            After 10+ years in the digital marketing industry, I transitioned to
-            software development driven by my passion for technology and
-            problem-solving. I specialize in building responsive full-stack web
-            applications. I'm eager to contribute my skills and grow as a
-            developer in a dynamic team environment.
+            {t('description')}
           </motion.p>
           <motion.div className="cta-buttons">
             <motion.a
@@ -58,7 +56,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View my work
+              {t('buttonWork')}
             </motion.a>
             <motion.a
               href="#contact"
@@ -66,7 +64,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Me
+              {t('buttonContact')}
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -15,6 +16,8 @@ const staggerContainer = {
 };
 
 export const Contact = () => {
+  const { t } = useTranslation();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -94,7 +97,7 @@ export const Contact = () => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        Let's get in touch!
+        {t('contactTitle')}
       </motion.h2>
       <motion.div className="contact-content" variants={fadeInUp}>
         <motion.form className="contact-form" onSubmit={handleSubmit}>
@@ -102,7 +105,7 @@ export const Contact = () => {
             type="text"
             name="name"
             value={formData.name}
-            placeholder="Your name..."
+            placeholder={t('namePlaceholder')}
             required
             whileFocus={{ scale: 1.02 }}
             onChange={handleInputChange}
@@ -111,7 +114,7 @@ export const Contact = () => {
             type="email"
             name="email"
             value={formData.email}
-            placeholder="Your email..."
+            placeholder={t('emailPlaceholder')}
             required
             whileFocus={{ scale: 1.02 }}
             onChange={handleInputChange}
@@ -119,7 +122,7 @@ export const Contact = () => {
           <motion.textarea
             // don't need a type for textarea, it defaults to text
             name="message"
-            placeholder="Your message..."
+            placeholder={t('messagePlaceholder')}
             value={formData.message}
             required
             whileFocus={{ scale: 1.02 }}
@@ -132,7 +135,7 @@ export const Contact = () => {
             whileTap={{ scale: 0.95 }}
             disabled={formStatus.submitting}
           >
-            {formStatus.submitting ? "Sending..." : "Send Message"}
+            {formStatus.submitting ? t('sending') : t('sendButton')}
           </motion.button>
           {formStatus.message && (
             <motion.div

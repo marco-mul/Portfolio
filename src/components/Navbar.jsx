@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { LanguageSelector } from "./LanguageSelector";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +15,7 @@ const staggerContainer = {
 };
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   return (
     //we're setting the animation to go from y: -100 to y:0
     <motion.nav
@@ -41,21 +44,28 @@ export const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#home">Home</a>
+          <a href="#home">{t('home')}</a>
         </motion.li>
         <motion.li
           variants={fadeInUp}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#projects">Projects</a>
+          <a href="#projects">{t('projects')}</a>
         </motion.li>
         <motion.li
           variants={fadeInUp}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#contact">Contact</a>
+          <a href="#contact">{t('contact')}</a>
+        </motion.li>
+        <motion.li
+          variants={fadeInUp}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <LanguageSelector />
         </motion.li>
       </motion.ul>
     </motion.nav>

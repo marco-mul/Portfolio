@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +14,7 @@ const staggerContainer = {
 };
 
 export const Projects = () => {
+  const { t } = useTranslation();
   return (
     // here we wait for the section to be visible before starting the animation,
     // and we only play it once, so it doesn't repeat when we scroll back up
@@ -30,7 +32,7 @@ export const Projects = () => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        My Projects
+        {t('projectTitle')}
       </motion.h2>
       <motion.div
         className="project-grid"
@@ -57,8 +59,7 @@ export const Projects = () => {
             <h3>Not(e)orious</h3>
           </a>
           <p>
-            An easy-to-use full-stack note-taking app built with Next.js and
-            OpenAI integration.
+            {t('noteoriousDescription')}
           </p>
           <div className="project-stack">
             <span>Next.js</span>
@@ -88,8 +89,7 @@ export const Projects = () => {
             <h3>Job Tracker</h3>
           </a>
           <p>
-            A full-stack job-tracking app that helps you organize your job
-            research. Built with Next.js, MongoDB and betterAuth.
+            {t('jobTrackerDescription')}
           </p>
           <div className="project-stack">
             <span>Next.js</span>
@@ -117,9 +117,7 @@ export const Projects = () => {
             <h3>Travel Plan</h3>
           </a>
           <p>
-            A full-stack app to organize your travels and plan stop by stop
-            itineraries with drag-and-drop feature. Built with Next.js, Neon,
-            OAuth and Google Maps API integration.
+            {t('travelPlannerDescription')}
           </p>
           <div className="project-stack">
             <span>Next.js</span>
