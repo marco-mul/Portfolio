@@ -295,7 +295,7 @@ body {
 
 /* Hero Media Queries */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -340,8 +340,9 @@ body {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -357,6 +358,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex: 1 1 300px;
+  max-width: 380px;
 }
 
 .project-card::before {

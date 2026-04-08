@@ -23,6 +23,11 @@ const resources = {
       travelPlannerDescription:
         "A full-stack app to organize your travels and plan stop-by-stop itineraries with drag-and-drop functionality. " +
         "Built with Next.js, Neon, OAuth and Google Maps API integration.",
+      whackADictatorDescription:
+        "My very first project, a whack-a-mole game, except you whack a dictator. Front-end app built with HTML, CSS and JavaScript.",
+      portfolioDescription:
+        "A front-end app to share information about me and showcase my most recent projects. Built using Motion for animations and i18next for internationalization.",  
+
       contactTitle: "Let's get in touch!",
       namePlaceholder: "Your name",
       emailPlaceholder: "Your email",
@@ -52,6 +57,10 @@ const resources = {
       travelPlannerDescription:
         "Une application full-stack pour organiser vos voyages et planifier des itinéraires étape par étape avec une fonctionnalité de drag-and-drop. " +
         "Développée avec Next.js, Neon, OAuth et intégration de l'API Google Maps.",
+      whackADictatorDescription:
+        "Mon tout premier projet, un jeu de whack-a-mole, sauf que la taupe est un dictateur. Application front-end développée en utilisant HTML, CSS et JavaScript.",
+      portfolioDescription:
+        "Une application front-end pour me présenter et partager mes projets. Développée avec Motion pour les animations et i18next pour l'internationalisation.",
       contactTitle: "Contactez-moi!",
       namePlaceholder: "Votre nom",
       emailPlaceholder: "Votre email",
