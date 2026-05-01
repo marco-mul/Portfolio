@@ -48,6 +48,34 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
+            style={{ backgroundImage: "url('/projects/happy-bet.png')" }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          />
+          <a
+            href="https://happy-bet.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>HappyBet</h3>
+          </a>
+          <p>{t("happyBetDescription")}</p>
+          <div className="project-stack">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>Neon</span>
+            <span>Prisma</span>
+            <span>NeonAuth</span>
+            <span>TailwindCSS</span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="project-card"
+          variants={fadeInUp}
+          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+        >
+          <motion.div
+            className="project-image"
             style={{ backgroundImage: "url('/projects/travel-plan.png')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
@@ -150,7 +178,7 @@ export const Projects = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
@@ -172,7 +200,7 @@ export const Projects = () => {
             <span>i18next</span>
             <span>EmailJS</span>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.section>
   );

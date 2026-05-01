@@ -26,7 +26,9 @@ const resources = {
       whackADictatorDescription:
         "My very first project, a whack-a-mole game, except you whack a dictator. Front-end app built with HTML, CSS and JavaScript.",
       portfolioDescription:
-        "A front-end app to share information about me and showcase my most recent projects. Built using Motion for animations and i18next for internationalization.",  
+        "A front-end app to share information about me and showcase my most recent projects. Built using Motion for animations and i18next for internationalization.", 
+      happyBetDescription:
+        "A full-stack betting app that allows users to create and join bets on any topic. Built with Next.js, TypeScript, NeonAuth and Prisma.", 
 
       contactTitle: "Let's get in touch!",
       namePlaceholder: "Your name",
@@ -61,6 +63,8 @@ const resources = {
         "Mon tout premier projet, un jeu de whack-a-mole, sauf que la taupe est un dictateur. Application front-end développée en utilisant HTML, CSS et JavaScript.",
       portfolioDescription:
         "Une application front-end pour me présenter et partager mes projets. Développée avec Motion pour les animations et i18next pour l'internationalisation.",
+      happyBetDescription:
+        "Une application de paris full-stack qui permet aux utilisateurs de créer et de rejoindre des paris sur n'importe quel sujet. Développée avec Next.js, TypeScript, NeonAuth et Prisma.",
       contactTitle: "Contactez-moi!",
       namePlaceholder: "Votre nom",
       emailPlaceholder: "Votre email",
